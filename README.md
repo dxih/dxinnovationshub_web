@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+🚀 DXIH — The Digital Incubation Hub
+"We don't just teach, and we don't just build. We incubate and execute."
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+DXIH is a premium, high-conversion landing page designed for a modern Digital Incubation Hub. It bridges the gap between tech talent learning and real-world product execution with a sleek, "non-biggery" minimalist aesthetic.
 
-## React Compiler
+💎 The Experience
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+⚡ Ultra-Sleek Performance: Zero-bloat code built on Vite for lightning-fast load times.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🎨 Sophisticated Minimalism: A refined typography system that prioritizes single-line clarity and professional whitespace.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🎬 Precision Animations: Staggered, scroll-triggered reveals using the Intersection Observer API for a high-end "Apple-style" feel.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+📱 Responsive by Design: Every component is engineered to maintain structural integrity—no awkward text wrapping or layout shifts.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🏗️ Modular Architecture: Clean, reusable React components written in TypeScript for maximum scalability.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🛠️ Tech Stack & Tooling
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Category,Technology
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Frontend,"React 19 (Hooks, Functional Components)"
+
+Styling,Material UI (MUI) v5 + Emotion
+
+Icons,Material Symbols & Brand Icons
+
+Development,Vite + TypeScript
+
+Deployment,Optimized for Vercel/Netlify
+
+
+
+🚀 Getting Started
+Prerequisites
+
+Node.js (v16.0 or higher)
+
+npm or yarn
+
+
+Installation
+Clone the Hub:
+
+git clone (https://github.com/dxih/dxinnovationshub_web.git)
+
+Install the Engine:
+
+npm install
+
+Ignite Development:
+
+npm run dev
+
+📂 Project Blueprint
+
+src/
+
+├── assets/          # Brand Identity & Imagery
+
+├── components/      # Atomic UI Components (Hero, Services, ChoiceStack)
+
+├── theme/           # Global design tokens & MUI overrides
+
+└── App.tsx          # Application orchestration
