@@ -19,16 +19,24 @@ DXIH is a premium, high-conversion landing page designed for a modern Digital In
 🏗️ Modular Architecture: Clean, reusable React components written in TypeScript for maximum scalability.
 
 🛠️ Tech Stack & Tooling
+
 Category,Technology
+
 Frontend,"React 19 (Hooks, Functional Components)"
+
 Styling,Material UI (MUI) v5 + Emotion
+
 Icons,Material Symbols & Brand Icons
+
 Development,Vite + TypeScript
+
 Deployment,Optimized for Vercel/Netlify
+
 
 
 🚀 Getting Started
 Prerequisites
+
 Node.js (v16.0 or higher)
 
 npm or yarn
