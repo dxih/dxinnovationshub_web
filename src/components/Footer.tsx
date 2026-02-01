@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Box, Container, Typography, Grid, Link, Divider } from '@mui/material';
 
 const Footer = () => {

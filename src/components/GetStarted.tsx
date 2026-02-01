@@ -3,6 +3,9 @@ import { Box, Container, Typography, Paper, Stack } from '@mui/material';
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import EastIcon from '@mui/icons-material/East';
+import CodeIcon from '@mui/icons-material/Code'
+import SettingIcon from '@mui/icons-material/Settings'
+import HandshakeIcon from '@mui/icons-material/Handshake'
 
 const choices = [
   {
@@ -16,6 +19,24 @@ const choices = [
     actionText: "Incubate Your Platform",
     icon: <RocketLaunchIcon sx={{ fontSize: 22 }} />,
     url: "#incubate-platform"
+  },
+  {
+    title: "Need a digital product built?",
+    actionText: "Built a product",
+    icon: <CodeIcon sx={{ fontSize: 22 }} />,
+    url: "#Build-a-product"
+  },
+  {
+    title: "Need data, security, or custom systems?",
+    actionText: "Request a Custom Solution",
+    icon: <SettingIcon sx={{ fontSize: 22 }} />,
+    url: "#incubate-platform"
+  },
+  {
+    title: "Want to support or collaborate?",
+    actionText: "Be a Partner",
+    icon: <HandshakeIcon sx={{ fontSize: 22 }} />,
+    url: "#Be a Partner"
   }
 ];
 
