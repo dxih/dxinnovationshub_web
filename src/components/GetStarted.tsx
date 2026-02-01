@@ -3,40 +3,40 @@ import { Box, Container, Typography, Paper, Stack } from '@mui/material';
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import EastIcon from '@mui/icons-material/East';
-import CodeIcon from '@mui/icons-material/Code'
-import SettingIcon from '@mui/icons-material/Settings'
-import HandshakeIcon from '@mui/icons-material/Handshake'
+import CodeIcon from '@mui/icons-material/Code';
+import SettingIcon from '@mui/icons-material/Settings';
+import HandshakeIcon from '@mui/icons-material/Handshake';
 
 const choices = [
   {
     title: "Want to grow as a tech talent?",
     actionText: "Join the Talent Incubation",
-    icon: <PersonSearchIcon sx={{ fontSize: 22 }} />,
+    icon: <PersonSearchIcon sx={{ fontSize: 20 }} />,
     url: "#join-talent"
   },
   {
     title: "Have a startup or platform idea?",
     actionText: "Incubate Your Platform",
-    icon: <RocketLaunchIcon sx={{ fontSize: 22 }} />,
+    icon: <RocketLaunchIcon sx={{ fontSize: 20 }} />,
     url: "#incubate-platform"
   },
   {
     title: "Need a digital product built?",
-    actionText: "Built a product",
-    icon: <CodeIcon sx={{ fontSize: 22 }} />,
+    actionText: "Build a product",
+    icon: <CodeIcon sx={{ fontSize: 20 }} />,
     url: "#Build-a-product"
   },
   {
-    title: "Need data, security, or custom systems?",
+    title: "Need data or custom systems?",
     actionText: "Request a Custom Solution",
-    icon: <SettingIcon sx={{ fontSize: 22 }} />,
-    url: "#incubate-platform"
+    icon: <SettingIcon sx={{ fontSize: 20 }} />,
+    url: "#custom-solution"
   },
   {
     title: "Want to support or collaborate?",
     actionText: "Be a Partner",
-    icon: <HandshakeIcon sx={{ fontSize: 22 }} />,
-    url: "#Be a Partner"
+    icon: <HandshakeIcon sx={{ fontSize: 20 }} />,
+    url: "#partner"
   }
 ];
 
@@ -44,7 +44,6 @@ const GetStarted = () => {
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef<HTMLDivElement>(null);
 
-  // Trigger entrance animation only once
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -59,7 +58,6 @@ const GetStarted = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Shared entrance animation style
   const getFadeStyle = (delay: number = 0) => ({
     opacity: isVisible ? 1 : 0,
     transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
@@ -72,8 +70,8 @@ const GetStarted = () => {
       ref={domRef}
       sx={{ py: 10, bgcolor: '#fbfcfd', overflow: 'hidden' }}
     >
-      <Container maxWidth="sm">
-        {/* Header Section */}
+      {/* Increased Container maxWidth slightly to help text fit on one line */}
+      <Container maxWidth="md"> 
         <Box sx={{ textAlign: 'center', mb: 5, ...getFadeStyle(0) }}>
           <Typography 
             variant="overline" 
@@ -87,18 +85,18 @@ const GetStarted = () => {
               fontWeight: 900, 
               color: 'secondary.main', 
               mt: 0.5,
-              mb: 1.5 
+              mb: 1.5,
+              whiteSpace: 'nowrap' // Prevents title wrapping
             }}
           >
             Choose Your Starting Point
           </Typography>
-          <Typography sx={{ color: 'text.secondary', fontSize: '0.95rem' }}>
+          <Typography sx={{ color: 'text.secondary', fontSize: '0.95rem', whiteSpace: 'nowrap' }}>
             Start where you are. We'll help you move forward.
           </Typography>
         </Box>
 
-        {/* Choice Cards Stack */}
-        <Stack spacing={1.5}>
+        <Stack spacing={1.5} sx={{ maxWidth: '750px', mx: 'auto' }}>
           {choices.map((item, index) => (
             <Paper
               key={index}
@@ -106,8 +104,8 @@ const GetStarted = () => {
               component="a"
               href={item.url}
               sx={{
-                ...getFadeStyle(0.2 + index * 0.1), // Staggered entrance
-                p: 2.5,
+                ...getFadeStyle(0.2 + index * 0.1),
+                p: { xs: 2, sm: 2.5 },
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
@@ -121,55 +119,52 @@ const GetStarted = () => {
                   bgcolor: '#fafafa',
                   transform: 'translateY(-4px)',
                   boxShadow: '0 12px 20px -5px rgba(26, 31, 61, 0.08)',
-                  // ONLY the icon turns yellow
-                  '& .main-icon': { 
-                    color: 'primary.main', 
-                    transform: 'scale(1.1)' 
-                  },
+                  '& .main-icon': { color: 'primary.main', transform: 'scale(1.1)' },
                   '& .action-text': { color: 'secondary.main' },
                   '& .arrow-icon': { transform: 'translateX(6px)', color: 'secondary.main' }
                 }
               }}
             >
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flex: 1, minWidth: 0 }}>
                 <Box sx={{ 
-                  width: 42, 
-                  height: 42, 
+                  width: 38, 
+                  height: 38, 
                   borderRadius: '6px', 
                   bgcolor: '#f8fafc', 
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center',
+                  flexShrink: 0,
                   color: 'secondary.main',
                 }}>
-                  <Box 
-                    component="span" 
-                    className="main-icon" 
-                    sx={{ display: 'flex', transition: 'all 0.3s ease' }}
-                  >
+                  <Box className="main-icon" sx={{ display: 'flex', transition: 'all 0.3s ease' }}>
                     {item.icon}
                   </Box>
                 </Box>
                 
                 <Typography 
                   sx={{ 
-                    fontWeight: 600, 
+                    fontWeight: 700, 
                     color: 'secondary.main',
-                    fontSize: '0.95rem'
+                    fontSize: { xs: '0.75rem', sm: '0.9rem', md: '0.95rem' }, // Responsive font scaling
+                    whiteSpace: 'nowrap', // THE MAGIC LINE
+                    overflow: 'hidden',
+                    textOverflow: 'clip' // Prevents dots, keeps it clean
                   }}
                 >
                   {item.title}
                 </Typography>
               </Box>
 
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, flexShrink: 0 }}>
                 <Typography 
                   className="action-text"
                   sx={{ 
                     fontWeight: 700, 
                     color: '#94a3b8',
-                    fontSize: '0.85rem',
-                    display: { xs: 'none', sm: 'block' },
+                    fontSize: '0.8rem',
+                    display: { xs: 'none', md: 'block' }, // Only show action text on larger screens to keep lines clean
+                    whiteSpace: 'nowrap',
                     transition: 'color 0.3s ease'
                   }}
                 >
