@@ -45,18 +45,24 @@ npm or yarn
 Installation
 Clone the Hub:
 
-Bash
-git clone https://github.com/YOUR_USERNAME/dxih-landing-page.git
+git clone (https://github.com/dxih/dxinnovationshub_web.git)
 
 Install the Engine:
+
 npm install
 
 Ignite Development:
+
 npm run dev
 
 📂 Project Blueprint
+
 src/
+
 ├── assets/          # Brand Identity & Imagery
+
 ├── components/      # Atomic UI Components (Hero, Services, ChoiceStack)
+
 ├── theme/           # Global design tokens & MUI overrides
+
 └── App.tsx          # Application orchestration
