@@ -9,22 +9,22 @@ const features = [
   { 
     title: 'Built for Incubation', 
     desc: 'Not shortcuts. We work closely with people and ideas over time.', 
-    icon: <TargetIcon sx={{ fontSize: 24 }} /> 
+    icon: <TargetIcon sx={{ fontSize: 22 }} /> 
   },
   { 
     title: 'Hands-on Execution', 
     desc: 'We don’t just plan — we build alongside you every step of the way.', 
-    icon: <GroupsIcon sx={{ fontSize: 24 }} /> 
+    icon: <GroupsIcon sx={{ fontSize: 22 }} /> 
   },
   { 
     title: 'Capacity Building', 
     desc: 'We don’t just deliver outputs — we build confidence and capabilities.', 
-    icon: <TrendingUpIcon sx={{ fontSize: 24 }} /> 
+    icon: <TrendingUpIcon sx={{ fontSize: 22 }} /> 
   },
   { 
     title: 'Systems That Last', 
     desc: 'Solutions designed for growth, sustainability, and real-world impact.', 
-    icon: <ShieldOutlinedIcon sx={{ fontSize: 24 }} /> 
+    icon: <ShieldOutlinedIcon sx={{ fontSize: 22 }} /> 
   },
 ];
 
@@ -46,41 +46,34 @@ const WhyDXIH = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Animation variants
   const slideFromLeft = {
     opacity: isVisible ? 1 : 0,
-    transform: isVisible ? 'translateX(0)' : 'translateX(-50px)',
+    transform: isVisible ? 'translateX(0)' : 'translateX(-40px)',
     transition: 'opacity 0.8s ease-out, transform 0.8s ease-out',
   };
-
-  const slideFromRightStaggered = (index: number) => ({
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? 'translateX(0)' : 'translateX(50px)',
-    transition: `opacity 0.8s ease-out ${0.2 + index * 0.1}s, transform 0.8s ease-out ${0.2 + index * 0.1}s`,
-  });
 
   return (
     <Box 
       id="why-dxih" 
       ref={domRef}
       sx={{ 
-        py: 12, 
-        bgcolor: '#1A1F3D', 
+        py: 15, 
+        bgcolor: '#1A234E', // THE CORRECT COLOR: Deep Midnight Navy
         color: 'white',
         overflow: 'hidden' 
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={6} alignItems="flex-start">
+        <Grid container spacing={8} alignItems="center">
           
           {/* Left Side Text */}
           <Grid item xs={12} md={5} sx={{ ...slideFromLeft }}>
             <Typography 
               variant="overline" 
               sx={{ 
-                color: 'primary.main', 
-                fontWeight: 800, 
-                letterSpacing: 1.5,
+                color: '#FFC843', // Using your primary gold/yellow
+                fontWeight: 900, 
+                letterSpacing: 2,
                 display: 'block',
                 mb: 2 
               }}
@@ -91,9 +84,10 @@ const WhyDXIH = () => {
               variant="h2" 
               sx={{ 
                 fontWeight: 900, 
-                fontSize: { xs: '2.5rem', md: '3.5rem' },
+                fontSize: { xs: '2.8rem', md: '3.8rem' },
                 color: "white",
-                mb: 4 
+                mb: 4,
+                lineHeight: 1.1
               }}
             >
               Why DXIH?
@@ -101,9 +95,9 @@ const WhyDXIH = () => {
             <Typography 
               sx={{ 
                 color: alpha('#fff', 0.8), 
-                fontSize: '1.1rem', 
-                lineHeight: 1.7,
-                mb: 4
+                fontSize: '1.15rem', 
+                lineHeight: 1.8,
+                mb: 4,
               }}
             >
               DXIH is built for incubation, not shortcuts. We work closely with people and ideas over time — helping them grow, improve, and become useful in the real world.
@@ -111,15 +105,15 @@ const WhyDXIH = () => {
             <Typography 
               sx={{ 
                 color: alpha('#fff', 0.8), 
-                fontSize: '1.1rem', 
-                lineHeight: 1.7 
+                fontSize: '1.15rem', 
+                lineHeight: 1.8 
               }}
             >
               By combining incubation with hands-on execution, we don’t just deliver outputs — we build capacity, confidence, and systems that last.
             </Typography>
           </Grid>
 
-          {/* Right Side Cards Grid */}
+          {/* Right Side Cards */}
           <Grid item xs={12} md={7}>
             <Grid container spacing={3}>
               {features.map((item, index) => (
@@ -127,62 +121,46 @@ const WhyDXIH = () => {
                   <Paper 
                     elevation={0} 
                     sx={{ 
-                      ...slideFromRightStaggered(index),
                       p: 4, 
                       height: '100%',
-                      bgcolor: alpha('#fff', 0.05),
-                      borderRadius: '6px',
-                      border: `1px solid ${alpha('#fff', 0.1)}`,
-                      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                      // This makes the card look like it's part of the background
+                      bgcolor: 'rgba(255, 255, 255, 0.05)', 
+                      borderRadius: '16px',
+                      border: '1px solid rgba(255, 255, 255, 0.1)',
+                      transition: 'all 0.3s ease',
                       '&:hover': {
-                        transform: 'translateY(-8px)',
-                        bgcolor: alpha('#fff', 0.08),
-                        borderColor: 'primary.main',
-                        '& .feature-icon': {
-                          transform: 'scale(1.15)',
-                          color: 'primary.main'
-                        }
+                        bgcolor: 'rgba(255, 255, 255, 0.08)',
+                        borderColor: 'rgba(255, 255, 255, 0.3)',
+                        transform: 'translateY(-5px)',
                       }
                     }}
                   >
-                    {/* Icon Container */}
                     <Box 
                       sx={{ 
-                        width: 48, 
-                        height: 48, 
-                        borderRadius: '6px', 
-                        bgcolor: alpha('#FFC843', 0.15), 
+                        width: 40, 
+                        height: 40, 
+                        borderRadius: '8px', 
+                        bgcolor: 'rgba(255, 255, 255, 0.1)', 
                         display: 'flex', 
                         alignItems: 'center', 
                         justifyContent: 'center', 
                         mb: 3,
-                        color: 'primary.main',
-                        transition: '0.3s'
+                        color: '#FFC843',
                       }}
                     >
-                      <Box className="feature-icon" sx={{ display: 'flex', transition: '0.3s' }}>
-                        {item.icon}
-                      </Box>
+                      {item.icon}
                     </Box>
                     
                     <Typography 
                       variant="h6" 
-                      sx={{ 
-                        fontWeight: 800, 
-                        mb: 1.5,
-                        fontSize: '1.25rem'
-                      }}
+                      sx={{ fontWeight: 800, mb: 1.5, color: 'white' }}
                     >
                       {item.title}
                     </Typography>
                     
                     <Typography 
                       variant="body2" 
-                      sx={{ 
-                        color: alpha('#fff', 0.6), 
-                        lineHeight: 1.6,
-                        fontSize: '0.95rem'
-                      }}
+                      sx={{ color: 'rgba(255, 255, 255, 0.6)', lineHeight: 1.6 }}
                     >
                       {item.desc}
                     </Typography>
@@ -191,7 +169,6 @@ const WhyDXIH = () => {
               ))}
             </Grid>
           </Grid>
-
         </Grid>
       </Container>
     </Box>
