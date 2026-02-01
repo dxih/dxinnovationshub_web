@@ -6,6 +6,8 @@
 DXIH is a premium, high-conversion landing page designed for a modern Digital Incubation Hub. It bridges the gap between tech talent learning and real-world product execution with a sleek, "non-biggery" minimalist aesthetic.
 
 💎 The Experience
+
+
 ⚡ Ultra-Sleek Performance: Zero-bloat code built on Vite for lightning-fast load times.
 
 🎨 Sophisticated Minimalism: A refined typography system that prioritizes single-line clarity and professional whitespace.
@@ -18,7 +20,7 @@ DXIH is a premium, high-conversion landing page designed for a modern Digital In
 
 🛠️ Tech Stack & Tooling
 Category,Technology
-Frontend,"React 18 (Hooks, Functional Components)"
+Frontend,"React 19 (Hooks, Functional Components)"
 Styling,Material UI (MUI) v5 + Emotion
 Icons,Material Symbols & Brand Icons
 Development,Vite + TypeScript
