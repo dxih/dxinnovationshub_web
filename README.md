@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+DXIH — Digital Incubation Hub Landing Page
+A high-performance, modern landing page for DXIH, built with React, TypeScript, and Material UI. This project focuses on a "less is more" aesthetic, featuring single-line typography, professional animations, and a responsive incubation-to-execution workflow.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+Clean Typography: Refined font scales to avoid a "biggery" look and maintain professional whitespace.
 
-Currently, two official plugins are available:
+One-Time Scroll Animations: Smooth "Fade-In-Up" entrance animations triggered by the Intersection Observer API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Interactive UI: Glassmorphism navbar, hover-responsive service cards, and a refined "Get Started" choice stack.
 
-## React Compiler
+Fully Responsive: Optimized for all screen sizes with single-line text logic to prevent awkward wrapping.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Type Safety: Built with TypeScript for robust development and fewer runtime errors.
 
-## Expanding the ESLint configuration
+🛠️ Tech Stack
+Framework: React 19
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Styling: Material UI (MUI)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Icons: MUI Icons
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Build Tool: Vite
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Language: TypeScript
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+📦 Installation & Setup
+Clone the repository:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Bash
+git clone (https://github.com/dxih/dxinnovationshub_web.git)
+cd dxih-landing-page
+Install dependencies:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Bash
+npm install
+Run the development server:
+
+Bash
+npm run dev
+Build for production:
+
+Bash
+npm run build
+📂 Project Structure
+Plaintext
+├── src/
+│   ├── assets/             # Images and Logos
+│   ├── components/         # Reusable UI components (Hero, Services, etc.)
+│   ├── theme/              # Custom MUI theme palette and overrides
+│   ├── App.tsx             # Main layout entry
+│   └── main.tsx            # React DOM rendering
+├── public/                 # Static assets (Favicon, etc.)
+└── index.html              # Entry HTML file
+🤝 Contributing
+Fork the Project
+
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+
+Push to the Branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+📄 License
+Distributed under the MIT License. See LICENSE for more information.
