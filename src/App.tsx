@@ -1,53 +1,37 @@
-import GetStartedPage from './Pages/GetStarted';
-import { ThemeProvider, CssBaseline, Box } from '@mui/material';
-import { Routes, Route } from 'react-router-dom';
-import { theme } from './theme';
+import GetStartedPage from "./Pages/GetStartedPage";
+import { ThemeProvider, CssBaseline, Box } from "@mui/material";
+import { Routes, Route } from "react-router-dom";
+import { theme } from "./theme";
+import LandingPage from "./Pages/LandingPage";
 
-import Navbar from './components/NavBar';
-import Hero from './components/Hero';
-import ServiceCard from './components/ServiceCard';
-import WhyDXIH from './components/WhyDXIH';
-import GetStarted from './components/GetStarted';
-import Footer from './components/Footer';
-import Portfolio from './components/Portfolio';
+import Navbar from "./components/NavBar";
+import Footer from "./components/Footer";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-
 function App() {
   const ScrollToTop = () => {
-  const { pathname } = useLocation();
+    const { pathname, hash } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    useEffect(() => {
+      // Only scroll to top if there's NO hash
+      if (!hash) {
+        window.scrollTo(0, 0);
+      }
+    }, [pathname, hash]);
 
-  return null;
-};
+    return null;
+  };
+
   return (
-  
     <ThemeProvider theme={theme}>
       <ScrollToTop />
       <CssBaseline />
-
       <Navbar />
-
       <Box component="main">
         <Routes>
-          
           {/* Home / Landing Page */}
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                <ServiceCard />
-                <Portfolio />
-                <WhyDXIH />
-                <GetStarted />
-              </>
-            }
-          />
+          <Route path="/" element={<LandingPage />} />
 
           {/* Get Started Page */}
           <Route path="/start" element={<GetStartedPage />} />

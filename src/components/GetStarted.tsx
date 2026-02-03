@@ -86,7 +86,8 @@ const GetStarted = () => {
               color: 'secondary.main', 
               mt: 0.5,
               mb: 1.5,
-              whiteSpace: 'nowrap' // Prevents title wrapping
+              whiteSpace: 'nowrap',
+              fontSize: {xs:"1.4rem", sm:"2.5rem"},
             }}
           >
             Choose Your Starting Point
@@ -149,7 +150,7 @@ const GetStarted = () => {
                     fontSize: { xs: '0.75rem', sm: '0.9rem', md: '0.95rem' }, // Responsive font scaling
                     whiteSpace: 'nowrap', // THE MAGIC LINE
                     overflow: 'hidden',
-                    textOverflow: 'clip' // Prevents dots, keeps it clean
+                    textOverflow: 'clip' 
                   }}
                 >
                   {item.title}
@@ -163,7 +164,7 @@ const GetStarted = () => {
                     fontWeight: 700, 
                     color: '#94a3b8',
                     fontSize: '0.8rem',
-                    display: { xs: 'none', md: 'block' }, // Only show action text on larger screens to keep lines clean
+                    display: { xs: 'none', md: 'block' }, 
                     whiteSpace: 'nowrap',
                     transition: 'color 0.3s ease'
                   }}
