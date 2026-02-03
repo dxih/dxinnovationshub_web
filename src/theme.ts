@@ -2,16 +2,16 @@ import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
   palette: {
-    primary: { main: '#FFC843' },       // keep your yellow accent
-    secondary: { main: '#334574' },     // lighter navy blue
-    background: { default: '#F8FAFC', paper: '#ffffff' },
+    primary: { main: '#010A45' },      // Dxih primary blue
+    secondary: { main: '#FDCB07' },    // Dxih primary yellow
+    background: { default: '#F8FAFC', paper: '#FFFFFF' },
   },
   typography: {
-    fontFamily: "'Inter', sans-serif",
-    h1: { fontWeight: 800, color: '#334574' }, // update headings too
-    h2: { fontWeight: 700, color: '#334574' },
+    fontFamily: "'Poppins', sans-serif",
+    h1: { fontWeight: 800, color: '#010A45' },
+    h2: { fontWeight: 700, color: '#010A45' },
   },
-  shape: { 
-    borderRadius: 2 // global border radius
+  shape: {
+    borderRadius: 2,
   },
 });
