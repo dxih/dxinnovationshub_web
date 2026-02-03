@@ -2,8 +2,8 @@ import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
   palette: {
-    primary: { main: '#010A45' },      // Dxih primary blue
-    secondary: { main: '#FDCB07' },    // Dxih primary yellow
+    primary: { main: '#FDCB07' },      // Dxih primary blue
+    secondary: { main: '#010A45' },    // Dxih primary yellow
     background: { default: '#F8FAFC', paper: '#FFFFFF' },
   },
   typography: {
