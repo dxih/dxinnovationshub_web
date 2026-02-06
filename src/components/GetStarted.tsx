@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { Box, Container, Typography, Paper, Stack } from '@mui/material';
+import { Link } from 'react-router-dom';
+
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import EastIcon from '@mui/icons-material/East';
@@ -45,14 +47,17 @@ const GetStarted = () => {
   const domRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
 
     if (domRef.current) observer.observe(domRef.current);
     return () => observer.disconnect();
@@ -65,34 +70,46 @@ const GetStarted = () => {
   });
 
   return (
-    <Box 
-      id="get-started" 
+    <Box
+      id="get-started"
       ref={domRef}
       sx={{ py: 10, bgcolor: '#fbfcfd', overflow: 'hidden' }}
     >
-      {/* Increased Container maxWidth slightly to help text fit on one line */}
-      <Container maxWidth="md"> 
+      <Container maxWidth="md">
         <Box sx={{ textAlign: 'center', mb: 5, ...getFadeStyle(0) }}>
-          <Typography 
-            variant="overline" 
-            sx={{ color: 'primary.main', fontWeight: 800, letterSpacing: 1.2, fontSize: '0.7rem' }}
+          <Typography
+            variant="overline"
+            sx={{
+              color: 'primary.main',
+              fontWeight: 800,
+              letterSpacing: 1.2,
+              fontSize: '0.7rem'
+            }}
           >
             GET STARTED
           </Typography>
-          <Typography 
-            variant="h4" 
-            sx={{ 
-              fontWeight: 900, 
-              color: 'secondary.main', 
+
+          <Typography
+            variant="h4"
+            sx={{
+              fontWeight: 900,
+              color: 'secondary.main',
               mt: 0.5,
               mb: 1.5,
               whiteSpace: 'nowrap',
-              fontSize: {xs:"1.4rem", sm:"2.5rem"},
+              fontSize: { xs: '1.4rem', sm: '2.5rem' },
             }}
           >
             Choose Your Starting Point
           </Typography>
-          <Typography sx={{ color: 'text.secondary', fontSize: '0.95rem', whiteSpace: 'nowrap' }}>
+
+          <Typography
+            sx={{
+              color: 'text.secondary',
+              fontSize: '0.95rem',
+              whiteSpace: 'nowrap'
+            }}
+          >
             Start where you are. We'll help you move forward.
           </Typography>
         </Box>
@@ -102,8 +119,8 @@ const GetStarted = () => {
             <Paper
               key={index}
               elevation={0}
-              component="a"
-              href={item.url}
+              component={Link}
+              to={item.url}
               sx={{
                 ...getFadeStyle(0.2 + index * 0.1),
                 p: { xs: 2, sm: 2.5 },
@@ -111,7 +128,7 @@ const GetStarted = () => {
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 textDecoration: 'none',
-                borderRadius: '6px', 
+                borderRadius: '6px',
                 border: '1px solid #eef2f6',
                 bgcolor: 'white',
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -120,64 +137,91 @@ const GetStarted = () => {
                   bgcolor: '#fafafa',
                   transform: 'translateY(-4px)',
                   boxShadow: '0 12px 20px -5px rgba(26, 31, 61, 0.08)',
-                  '& .main-icon': { color: 'primary.main', transform: 'scale(1.1)' },
+                  '& .main-icon': {
+                    color: 'primary.main',
+                    transform: 'scale(1.1)'
+                  },
                   '& .action-text': { color: 'secondary.main' },
-                  '& .arrow-icon': { transform: 'translateX(6px)', color: 'secondary.main' }
+                  '& .arrow-icon': {
+                    transform: 'translateX(6px)',
+                    color: 'secondary.main'
+                  }
                 }
               }}
             >
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flex: 1, minWidth: 0 }}>
-                <Box sx={{ 
-                  width: 38, 
-                  height: 38, 
-                  borderRadius: '6px', 
-                  bgcolor: '#f8fafc', 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'center',
-                  flexShrink: 0,
-                  color: 'secondary.main',
-                }}>
-                  <Box className="main-icon" sx={{ display: 'flex', transition: 'all 0.3s ease' }}>
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 2,
+                  flex: 1,
+                  minWidth: 0
+                }}
+              >
+                <Box
+                  sx={{
+                    width: 38,
+                    height: 38,
+                    borderRadius: '6px',
+                    bgcolor: '#f8fafc',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                    color: 'secondary.main',
+                  }}
+                >
+                  <Box
+                    className="main-icon"
+                    sx={{ display: 'flex', transition: 'all 0.3s ease' }}
+                  >
                     {item.icon}
                   </Box>
                 </Box>
-                
-                <Typography 
-                  sx={{ 
-                    fontWeight: 700, 
+
+                <Typography
+                  sx={{
+                    fontWeight: 700,
                     color: 'secondary.main',
-                    fontSize: { xs: '0.75rem', sm: '0.9rem', md: '0.95rem' }, // Responsive font scaling
-                    whiteSpace: 'nowrap', // THE MAGIC LINE
+                    fontSize: { xs: '0.75rem', sm: '0.9rem', md: '0.95rem' },
+                    whiteSpace: 'nowrap',
                     overflow: 'hidden',
-                    textOverflow: 'clip' 
+                    textOverflow: 'clip'
                   }}
                 >
                   {item.title}
                 </Typography>
               </Box>
 
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, flexShrink: 0 }}>
-                <Typography 
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1.5,
+                  flexShrink: 0
+                }}
+              >
+                <Typography
                   className="action-text"
-                  sx={{ 
-                    fontWeight: 700, 
+                  sx={{
+                    fontWeight: 700,
                     color: '#94a3b8',
                     fontSize: '0.8rem',
-                    display: { xs: 'none', md: 'block' }, 
+                    display: { xs: 'none', md: 'block' },
                     whiteSpace: 'nowrap',
                     transition: 'color 0.3s ease'
                   }}
                 >
                   {item.actionText}
                 </Typography>
-                <EastIcon 
+
+                <EastIcon
                   className="arrow-icon"
-                  sx={{ 
-                    fontSize: 18, 
+                  sx={{
+                    fontSize: 18,
                     color: '#cbd5e1',
                     transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
-                  }} 
+                  }}
                 />
               </Box>
             </Paper>
