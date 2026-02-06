@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { Box, Container, Typography, Grid, Divider } from "@mui/material";
 import { useNavigate, useLocation } from "react-router-dom";
 import LogoImg from "../assets/Logo/Logo.png";
+import Bg1 from "../assets/bg1.png";
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,10 +34,8 @@ const Footer = () => {
       "opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1)",
   };
 
-  // NEW: Handle footer navigation
   const handleFooterNav = (id: string) => {
     if (location.pathname !== "/") {
-      // navigate to home with state
       navigate("/", { state: { scrollToId: id } });
     } else {
       const el = document.getElementById(id);
@@ -49,11 +48,21 @@ const Footer = () => {
       id="footer"
       ref={domRef}
       sx={{
-        bgcolor: "secondary.main",
         color: "white",
+        bgcolor: "secondary.main",
+
         pt: 8,
         pb: 4,
         overflow: "hidden",
+
+        // Background image
+        backgroundImage:`linear-gradient(
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0)
+        ), url(${Bg1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <Container maxWidth="lg" sx={{ ...footerRevealStyle }}>
@@ -84,16 +93,15 @@ const Footer = () => {
                   <Grid item key={item}>
                     <Typography
                       onClick={() =>
-                        item === "Get StartedS"
+                        item === "Get Started"
                           ? navigate("/start")
                           : handleFooterNav(id)
                       }
                       sx={{
                         color: "rgba(255,255,255,0.5)",
-                        textDecoration: "none",
                         fontSize: "0.8rem",
                         fontWeight: 600,
-                         mx: { xs: 1, sm: 2 }, 
+                        mx: { xs: 1, sm: 2 },
                         whiteSpace: "nowrap",
                         cursor: "pointer",
                         transition: "0.3s",

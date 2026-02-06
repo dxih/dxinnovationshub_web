@@ -1,12 +1,11 @@
-import { Box, Container, Typography, Button, Stack, Chip } from "@mui/material";
+import { Box, Container, Typography, Button, Stack } from "@mui/material";
 import { Link } from "react-router-dom"; // Added for navigation
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import StarsIcon from "@mui/icons-material/Stars";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
+import Bg3 from "../assets/bg3.jpg";
 
 const Hero = () => {
-  // Modal state and handlers removed as requested
 
   const fadeInUp = {
     "@keyframes fadeInUp": {
@@ -20,32 +19,21 @@ const Hero = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 10, md: 15 },
-        pb: 10,
+        pt: { xs: 10, md: 20 },
+        pb: 20,
         textAlign: "center",
         background: "linear-gradient(to bottom, #eff6ff 0%, #ffffff 100%)",
-        overflow: "hidden",
+        overflow: "hidden",        
+        backgroundImage: `linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0)
+        ), url(${Bg3})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <Container maxWidth="lg">
-        <Chip
-          icon={<StarsIcon style={{ fontSize: 14, color: "#FFC843" }} />}
-          label="Digital Incubation Hub"
-          variant="outlined"
-          sx={{
-            ...fadeInUp,
-            animationDelay: "0.1s",
-            mb: 3,
-            fontWeight: 600,
-            fontSize: "0.75rem",
-            bgcolor: "white",
-            borderColor: "#e2e8f0",
-            px: 0.5,
-            py: 2,
-            borderRadius: "6px",
-            boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.05)",
-          }}
-        />
 
         <Typography
           variant="h1"

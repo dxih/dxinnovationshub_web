@@ -7,7 +7,7 @@ export const theme = createTheme({
     background: { default: '#F8FAFC', paper: '#FFFFFF' },
   },
   typography: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
     h1: { fontWeight: 800, color: '#010A45' },
     h2: { fontWeight: 700, color: '#010A45' },
   },

@@ -483,6 +483,7 @@ const GetStartedPage = () => {
                     mb: 2,
                     fontSize: "0.65rem",
                     textTransform: "uppercase",
+                    padding: 0,
                   }}
                 >
                   05. Your Details
@@ -497,7 +498,7 @@ const GetStartedPage = () => {
                     required
                     sx={{
                       "& .MuiOutlinedInput-root": {
-                        borderRadius: "12px",
+                        borderRadius: "10px",
                         fontSize: "0.85rem",
                       },
                     }}
@@ -512,7 +513,7 @@ const GetStartedPage = () => {
                     required
                     sx={{
                       "& .MuiOutlinedInput-root": {
-                        borderRadius: "12px",
+                        borderRadius: "10px",
                         fontSize: "0.85rem",
                       },
                     }}
@@ -525,7 +526,7 @@ const GetStartedPage = () => {
                     variant="outlined"
                     sx={{
                       "& .MuiOutlinedInput-root": {
-                        borderRadius: "12px",
+                        borderRadius: "10px",
                         fontSize: "0.85rem",
                       },
                     }}

@@ -76,7 +76,7 @@ const Navbar = () => {
               src={LogoImg}
               alt="DXIH Logo"
               sx={{
-                height: { xs: 30, md: 35 },
+                height: { xs: 60, md: 75 },
                 width: "auto",
                 objectFit: "contain",
               }}
