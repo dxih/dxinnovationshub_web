@@ -12,31 +12,31 @@ const choices = [
     title: "Want to grow as a tech talent?",
     actionText: "Join the Talent Incubation",
     icon: <PersonSearchIcon sx={{ fontSize: 20 }} />,
-    url: "#join-talent"
+    url: "/start"
   },
   {
     title: "Have a startup or platform idea?",
     actionText: "Incubate Your Platform",
     icon: <RocketLaunchIcon sx={{ fontSize: 20 }} />,
-    url: "#incubate-platform"
+    url: "/start"
   },
   {
     title: "Need a digital product built?",
     actionText: "Build a product",
     icon: <CodeIcon sx={{ fontSize: 20 }} />,
-    url: "#Build-a-product"
+    url: "/start"
   },
   {
     title: "Need data or custom systems?",
     actionText: "Request a Custom Solution",
     icon: <SettingIcon sx={{ fontSize: 20 }} />,
-    url: "#custom-solution"
+    url: "/start"
   },
   {
     title: "Want to support or collaborate?",
     actionText: "Be a Partner",
     icon: <HandshakeIcon sx={{ fontSize: 20 }} />,
-    url: "#partner"
+    url: "/start"
   }
 ];
 

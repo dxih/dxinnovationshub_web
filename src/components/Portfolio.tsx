@@ -113,7 +113,7 @@ const Portfolio = () => {
           </Typography>
           <Typography
             sx={{
-              color: "tsecondary.main",
+              color: "secondary.main",
               fontSize: "1rem",
               lineHeight: 1.7,
             }}
@@ -153,7 +153,7 @@ const Portfolio = () => {
                   >
                     <Icon
                       sx={{
-                        fontSize: "1.4rem",
+                        fontSize: "1.9rem",
                         color: "secondary.main",
                       }}
                     />
@@ -191,7 +191,7 @@ const Portfolio = () => {
 
                   <Typography
                     sx={{
-                      fontSize: "0.9rem",
+                      fontSize: "1rem",
                       color: "secondary.main",
                       lineHeight: 1.6,
                       mb: 3,
@@ -212,7 +212,7 @@ const Portfolio = () => {
                           border: "1px solid",
                           borderColor: "divider",
                           borderRadius: "4px",
-                          fontSize: "0.65rem",
+                          fontSize: "0.85rem",
                           fontWeight: 600,
                           color: "secondary.main",
                         }}

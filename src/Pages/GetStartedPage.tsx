@@ -19,6 +19,7 @@ import {
 import StarsIcon from "@mui/icons-material/Stars";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Link } from "react-router-dom";
+import Bg2 from "../assets/bg2.jpg";
 
 const GetStartedPage = () => {
   // Logic to clear the form on page load/back button
@@ -73,6 +74,13 @@ const GetStartedPage = () => {
         minHeight: "100vh",
         pt: { xs: 12, md: 15 },
         pb: 10,
+        backgroundImage: `linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0)
+        ), url(${Bg2})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <Container maxWidth="md">
@@ -500,6 +508,7 @@ const GetStartedPage = () => {
                       "& .MuiOutlinedInput-root": {
                         borderRadius: "10px",
                         fontSize: "0.85rem",
+                        py: 0.5,
                       },
                     }}
                   />
@@ -515,6 +524,7 @@ const GetStartedPage = () => {
                       "& .MuiOutlinedInput-root": {
                         borderRadius: "10px",
                         fontSize: "0.85rem",
+                        py: 0.5,
                       },
                     }}
                   />
@@ -528,6 +538,7 @@ const GetStartedPage = () => {
                       "& .MuiOutlinedInput-root": {
                         borderRadius: "10px",
                         fontSize: "0.85rem",
+                        py: 0.5,
                       },
                     }}
                   />

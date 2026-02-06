@@ -58,7 +58,7 @@ const WhyDXIH = () => {
       ref={domRef}
       sx={{ 
         py: { xs: 10, md: 15 }, 
-        bgcolor: '#1E2959', // Matched the exact navy from your image
+        bgcolor: 'secondary.main', // Matched the exact navy from your image
         color: 'white',
         overflow: 'hidden' 
       }}
@@ -71,7 +71,7 @@ const WhyDXIH = () => {
             <Typography 
               variant="overline" 
               sx={{ 
-                color: '#FFC843', 
+                color: '#primary.main', 
                 fontWeight: 700, 
                 letterSpacing: 1.2,
                 display: 'block',
@@ -145,7 +145,7 @@ const WhyDXIH = () => {
                         alignItems: 'center', 
                         justifyContent: 'center', 
                         mb: 3,
-                        color: '#FFC843',
+                        color: 'primary.main',
                       }}
                     >
                       {item.icon}

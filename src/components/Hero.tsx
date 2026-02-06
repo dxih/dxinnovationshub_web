@@ -19,8 +19,8 @@ const Hero = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 30, md: 20 },
-        pb: { xs: 30, md: 20 },
+        pt: { xs: 20, md: 20 },
+        pb: { xs: 25, md: 20 },
         textAlign: "center",
         background: "linear-gradient(to bottom, #eff6ff 0%, #ffffff 100%)",
         overflow: "hidden",        
@@ -49,12 +49,21 @@ const Hero = () => {
           }}
         >
           We incubate people and
-          <Box
-            component="span"
-            sx={{ color: "primary.main", display: "block" }}
-          >
-            ideas
-          </Box>
+<Box
+  component="span"
+  sx={{
+    fontFamily: "'Playwrite CU', cursive",
+    fontWeight: 700,
+    fontSize: { xs: "4rem", md: "6rem" },
+    display: "block",
+    color: "primary.main",
+    py: 2,
+  }}
+>
+  ideas
+</Box>
+
+
           into real digital solutions
         </Typography>
 

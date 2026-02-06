@@ -94,8 +94,8 @@ const Navbar = () => {
                   textTransform: "none",
                   fontWeight: 500,
                   fontSize: "0.8rem",
-                  px: 1.5,
-                  "&:hover": { color: "primary.main", bgcolor: "transparent" },
+                  px: 3,
+                  "&:hover": { color: "secondary.main", bgcolor: "primary.main", borderRadius: "10px" },
                 }}
               >
                 {link.title}
