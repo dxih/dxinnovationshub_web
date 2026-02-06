@@ -19,8 +19,8 @@ const Hero = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 35, md: 20 },
-        pb: { xs: 35, md: 20 },
+        pt: { xs: 30, md: 20 },
+        pb: { xs: 30, md: 20 },
         textAlign: "center",
         background: "linear-gradient(to bottom, #eff6ff 0%, #ffffff 100%)",
         overflow: "hidden",        
@@ -76,91 +76,94 @@ const Hero = () => {
           learning and ideas to working platforms, products, and systems.
         </Typography>
 
+      <Stack
+        direction="column"
+        spacing={2}
+        justifyContent="center"
+        alignItems="center"
+        sx={{ ...fadeInUp, animationDelay: "0.7s" }}
+      >
+        {/* TOP TWO BUTTONS */}
         <Stack
-          direction={{ xs: "column", md: "row" }}
-          spacing={2}
-          justifyContent="center"
-          alignItems="center"
-          sx={{ ...fadeInUp, animationDelay: "0.7s" }}
+          direction="row"
+          spacing={1.5}
+          sx={{ width: { xs: "100%", md: "auto" } }}
         >
           <Button
             component={Link}
             to="/start"
-            variant="contained"
-            disableElevation
-            endIcon={<ArrowForwardIcon />}
+            variant="outlined"
+            startIcon={<PersonAddAlt1Icon />}
             sx={{
-              bgcolor: "primary.main",
+              borderColor: "secondary.main",
               color: "secondary.main",
-              px: 3.5,
+              px: { xs: 2, sm: 3 },
               py: 1.5,
+              flex: { xs: 1, md: "none" },
               borderRadius: "6px",
-              fontWeight: 700,
-              fontSize: "0.9rem",
+              fontWeight: 600,
+              fontSize: "0.85rem",
               textTransform: "none",
-              width: { xs: "100%", md: "auto" },
-              "&:hover": { bgcolor: "secondary.main", color: "white" },
+              borderWidth: "1.5px",
+              "&:hover": {
+                borderWidth: "1.5px",
+                bgcolor: "rgba(26, 31, 61, 0.04)",
+              },
             }}
           >
-            Start With DXIH
+            Join Talent
           </Button>
 
-          <Stack
-            direction="row"
-            spacing={1.5}
-            sx={{ width: { xs: "100%", md: "auto" } }}
+          <Button
+            component={Link}
+            to="/start"
+            variant="outlined"
+            startIcon={<RocketLaunchIcon />}
+            sx={{
+              borderColor: "secondary.main",
+              color: "secondary.main",
+              px: { xs: 2, sm: 3 },
+              py: 1.5,
+              flex: { xs: 1, md: "none" },
+              borderRadius: "6px",
+              fontWeight: 600,
+              fontSize: "0.85rem",
+              textTransform: "none",
+              borderWidth: "1.5px",
+              "&:hover": {
+                borderWidth: "1.5px",
+                bgcolor: "rgba(26, 31, 61, 0.04)",
+              },
+            }}
           >
-            <Button
-              component={Link}
-              to="/start"
-              variant="outlined"
-              startIcon={<PersonAddAlt1Icon />}
-              sx={{
-                borderColor: "secondary.main",
-                color: "secondary.main",
-                px: { xs: 2, sm: 3 },
-                py: 1.5,
-                flex: { xs: 1, md: "none" },
-                borderRadius: "6px",
-                fontWeight: 600,
-                fontSize: "0.85rem",
-                textTransform: "none",
-                borderWidth: "1.5px",
-                "&:hover": {
-                  borderWidth: "1.5px",
-                  bgcolor: "rgba(26, 31, 61, 0.04)",
-                },
-              }}
-            >
-              Join Talent
-            </Button>
-
-            <Button
-              component={Link}
-              to="/start"
-              variant="outlined"
-              startIcon={<RocketLaunchIcon />}
-              sx={{
-                borderColor: "secondary.main",
-                color: "secondary.main",
-                px: { xs: 2, sm: 3 },
-                py: 1.5,
-                flex: { xs: 1, md: "none" },
-                borderRadius: "6px",
-                fontWeight: 600,
-                fontSize: "0.85rem",
-                textTransform: "none",
-                borderWidth: "1.5px",
-                "&:hover": {
-                  borderWidth: "1.5px",
-                  bgcolor: "rgba(26, 31, 61, 0.04)",
-                },
-              }}
-            >
-              Build With Us
-            </Button>
-          </Stack>
+            Build With Us
+          </Button>
         </Stack>
+
+        {/* BOTTOM PRIMARY CTA */}
+        <Button
+          component={Link}
+          to="/start"
+          variant="contained"
+          disableElevation
+          endIcon={<ArrowForwardIcon />}
+          sx={{
+            bgcolor: "primary.main",
+            color: "secondary.main",
+            px: 3.5,
+            py: 1.5,
+            borderRadius: "6px",
+            fontWeight: 700,
+            fontSize: "0.9rem",
+            textTransform: "none",
+            width: { xs: "100%", md: "auto" },
+            "&:hover": { bgcolor: "secondary.main", color: "white" },
+          }}
+        >
+          Start With DXIH
+        </Button>
+      </Stack>
+
       </Container>
     </Box>
   );
