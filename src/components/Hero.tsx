@@ -19,8 +19,8 @@ const Hero = () => {
   return (
     <Box
       sx={{
-        pt: { xs: 10, md: 20 },
-        pb: 20,
+        pt: { xs: 35, md: 20 },
+        pb: { xs: 35, md: 20 },
         textAlign: "center",
         background: "linear-gradient(to bottom, #eff6ff 0%, #ffffff 100%)",
         overflow: "hidden",        

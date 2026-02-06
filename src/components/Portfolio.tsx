@@ -74,7 +74,7 @@ const Portfolio = () => {
       id="portfolio"
       ref={ref}
       sx={{
-        py: { xs: 10, md: 14 },
+        py: { xs: 7, md: 14 },
         bgcolor: "#fbfcfd",        
         backgroundImage: `linear-gradient(
         rgba(0, 0, 0, 0),
