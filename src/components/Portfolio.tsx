@@ -32,28 +32,7 @@ const projects: Project[] = [
     tags: ["EdTech", "Platform"],
     icon: SchoolOutlinedIcon,
     url: "https://apprelab.com",
-  },
-  {
-    title: "SkillNest",
-    desc: "A digital apprenticeship program growing job-ready tech talent.",
-    tags: ["Talent Development", "Program"],
-    icon: BusinessCenterOutlinedIcon,
-    url: "https://skillnest.com",
-  },
-  {
-    title: "Vehicle Inspection Platform",
-    desc: "Remote inspection and reporting system for operational teams.",
-    tags: ["Enterprise", "Automation"],
-    icon: DirectionsCarFilledOutlinedIcon,
-    url: "#",
-  },
-  {
-    title: "Custom Dashboards & Secure Systems",
-    desc: "Internal dashboards and secure systems built for organizations.",
-    tags: ["Internal Tools", "Security"],
-    icon: GridViewOutlinedIcon,
-    url: "#",
-  },
+  }
 ];
 
 const Portfolio = () => {
