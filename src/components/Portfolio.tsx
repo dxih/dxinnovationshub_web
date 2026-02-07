@@ -10,9 +10,6 @@ import {
   Tooltip,
 } from "@mui/material";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
-import BusinessCenterOutlinedIcon from "@mui/icons-material/BusinessCenterOutlined";
-import DirectionsCarFilledOutlinedIcon from "@mui/icons-material/DirectionsCarFilledOutlined";
-import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import LanguageIcon from "@mui/icons-material/Language";
 import Bg2 from "../assets/bg2.jpg";
 
